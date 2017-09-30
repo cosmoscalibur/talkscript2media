@@ -1,4 +1,4 @@
-# talkscript2media
+# TalkScript2Media
 
 This package is an experiment to create an alternative to ARI based only in free software and open source. Convert a talk script and a set of slides to video.  
 
@@ -25,3 +25,8 @@ easy to use for users not familiar with R language.
 	+   Festival: [bug detecting languages differents to english](https://bugs.launchpad.net/ubuntu/+source/festival/+bug/1650237). Requiere `festvox-ellpc11k` to support spanish language.   
 	+   eSpeak: Recommended with MBrola voices (ex: mbrola-es2 for spanish).  
 	+   SVOX Pico: You need to install `libttspico0 libttspico-utils libttspico-dat`.  
+
+## Team
+
++   [Edward Y. Villegas Pulgarin](https://github.com/cosmoscalibur).  
++   [Manuela Jaramillo](https://github.com/manuela98).

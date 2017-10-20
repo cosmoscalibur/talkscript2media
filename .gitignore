@@ -1,0 +1,12 @@
+# Exclude generated audio files
+*.mp3
+*.wav
+*.ogg
+# Exclude generated video files
+*.mp4
+*.ogv
+# Temporary directories
+tmp/
+.ipynb_checkpoints
+# Temporary files
+*~

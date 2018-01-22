@@ -2,7 +2,7 @@
 
 import os
 
-def storange():
+def storage():
 
 	Ruta = [r'tests/audio',r'tests/img',r'tests/text']
 
@@ -12,4 +12,4 @@ def storange():
 		if not os.path.exists(i): os.makedirs(i)
 
 
-storange()
+storage()

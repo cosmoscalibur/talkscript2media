@@ -7,6 +7,10 @@
 *.ogv
 # Temporary directories
 tmp/
-.ipynb_checkpoints
+.ipynb_checkpoints/
+__pycache__/
 # Temporary files
 *~
+# Python compiled files
+*.pyc
+*.pyo

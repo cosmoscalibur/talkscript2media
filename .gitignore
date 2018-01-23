@@ -5,6 +5,9 @@
 # Exclude generated video files
 *.mp4
 *.ogv
+# Exclude generated text files
+Aud.txt
+Duration.txt
 # Temporary directories
 tmp/
 .ipynb_checkpoints/

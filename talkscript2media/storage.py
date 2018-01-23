@@ -5,7 +5,7 @@ import os
 def Storage(route_images,route_text,route_audio,route_video):
 
     
-    #image storage path,text storage path
+    #image storage path ,text storage path,video output path  
     
     if not os.path.exists(route_images) or not os.path.exists(route_text) or not os.path.exists(route_video):
         print('the routes do not exist')
@@ -17,14 +17,17 @@ def Storage(route_images,route_text,route_audio,route_video):
     return 0
             
 
-#verifying the existence of each file
+
 
 
 def Existence(file,route_img,route_text):
     
+    #Verifying the existence of each file (images and text) specified
+    
     f = open(file,'r')
     h = f.readlines()
-    language = h[0]
+    
+    language = h[0] 
     
     img = []
     text = []

@@ -2,7 +2,7 @@ import talkscript2media.storage as storage
 import talkscript2media.text_to_audio as text_to_audio
 import talkscript2media.to_video as to_video
 
-file_name = 'file.txt'
+file_name = 'tests/file.txt'
 route_output_video = 'tests'
 name_output_video = 'Guardianes.mp4'
 

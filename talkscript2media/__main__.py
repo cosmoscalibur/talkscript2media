@@ -11,16 +11,19 @@ route_text = 'tests/text'
 route_audio = 'tests/audio'
 
 
+N = Number_images(route_images)
 
 storage.Storage(route_images,route_text,route_audio,route_output_video )
 
 storage.Existence(file_name,route_images,route_text)
 
-text_to_audio.Audio_festival(route_images,route_text,route_audio,storage.Existence(file_name,route_images,route_text)[1],storage.Existence(file_name,route_images,route_text)[2])#text
 
-                             #Audio_festival('tests/img','tests/text','tests/audio',['01.txt','02.txt','03.txt'],'en')
+Exist = storage.Existence(file_name,route_images,route_text)
 
-text_to_audio.Duration(route_images,route_audio,storage.Existence(file_name,route_images,route_text)[0])#img
+text_to_audio.Audio_festival(route_text,route_audio,Exist[1],Exist[2],N) #Exist[1] Name texts ,Exist[2] language 
+
+
+text_to_audio.Duration(N,route_images,route_audio,Exist[0])# Exist[0] Name images 
 
 to_video.Image_Video()
 

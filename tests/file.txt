@@ -3,3 +3,9 @@ en
 02.jpg>02.txt
 03.jpg>03.txt
 
+file_name=tests/file.txt
+route_output_video=tests
+name_output_video=Guardianes.mp4
+route_images=tests/img
+route_text=tests/text
+route_audio=tests/audio

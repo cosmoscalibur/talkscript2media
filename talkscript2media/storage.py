@@ -20,35 +20,37 @@ def Storage(route_images,route_text,route_audio,route_video):
 
 
 
-def Existence(file,route_img,route_text):
+def Existence(file):
     
-    #Verifying the existence of each file (images and text) specified
-    
+    #Verifying the existence of each file (images and text) specified and extracts information from file paths
     f = open(file,'r')
-    h = f.readlines()
+    file = f.readlines()
     
-    language = h[0] 
+    language = file[0].split(' \n')[0]
+
     
-    img = []
+    
+    #stores names of img
+    img = [] 
     text = []
     
-    for i in range(1,len(h)-1):
-        img+=[h[i].split('>')[0]]
-        text+=[h[i].split('>')[1].split('\n')[0]]
-        
-    for i in range(len(img)):
-        
-        if os.path.isfile(route_img+'/'+img[i]) and  os.path.isfile(route_text+'/'+text[i]):
-            print ('exist')
-        else:
-            print('the files not  exist')
+    file_1 = file[1:file.index('\n')] #list image and text information
+    file_2 = file[file.index('\n')+1:]
+
     
-    return img,text,language.split('\n')[0]
+    #get image name and text name
+    
+    img = [i.split('>')[0] for i in file_1]
+    text = [i.split('>')[1].split('\n')[0] for i in file_1]
+    
+    #get routes specified in the file
+    
+    routes = [i.split('=')[1].split('\n')[0] for i in file_2]  
+    
+    return img,text,language,routes
     
 
 
-        
-        
         
         
         

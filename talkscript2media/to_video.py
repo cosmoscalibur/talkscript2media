@@ -2,15 +2,15 @@ import shlex
 import subprocess
 
 
-def Image_Video():
+def Image_Video(r_video):
     #Generating video from images and archive duration with ffmpeg
     #Each image appears the determined seconds
-    command_line = 'ffmpeg -i Duration.txt -vf "scale=trunc(iw/2)*2:trunc(ih/2)*2" Video0.mp4'
+    command_line = 'ffmpeg -i Duration.txt -vf "scale=trunc(iw/2)*2:trunc(ih/2)*2"  '+r_video+'/Video0.mp4'
     args = shlex.split(command_line)
-    subprocess.Popen(args).communicate()
+    file_log=subprocess.Popen(args).communicate()
 
 
-def U_Audios(N, route_audio):
+def U_Audios(N,route_audio):
     #Union of audios generated with Audio_festival()
     #Necessary file for input to ffmpeg for audio union
     f = open('Aud.txt', 'w')
@@ -20,11 +20,11 @@ def U_Audios(N, route_audio):
     command_line = 'ffmpeg -f concat -safe 0 -i Aud.txt -c copy ' + route_audio \
         + '/audio.wav'
     args = shlex.split(command_line)
-    subprocess.Popen(args).communicate()
+    file_log=subprocess.Popen(args).communicate()
 
 
 def Video_U_Audio(route_audio, route_video, name_video):
     #Concatenate video obtained in Image_Video() and audio obtained in  U_Audios().
-    command_line = 'ffmpeg -i Video0.mp4 -i '+route_audio+'/audio.wav -strict -2 '+route_video+'/'+name_video
+    command_line = 'ffmpeg -i '+route_video+'/Video0.mp4 -i '+route_audio+'/audio.wav -strict -2 '+route_video+'/'+name_video
     args = shlex.split(command_line)
-    subprocess.Popen(args).communicate()
+    file_log = subprocess.Popen(args).communicate()

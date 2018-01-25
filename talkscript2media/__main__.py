@@ -23,8 +23,8 @@ storage.Storage(route_images, route_text, route_audio, route_output_video)
 
 
 text_to_audio.Audio_festival(route_text, route_audio, Exist[1], Exist[2], N)
-text_to_audio.Duration(N, route_images, route_audio, Exist[0])
+text_to_audio.Duration(N,route_images, route_audio, Exist[0])
 
-to_video.Image_Video()
-to_video.U_Audios(text_to_audio.Number_images(route_images), route_audio)
+to_video.Image_Video(route_output_video)
+to_video.U_Audios(N,route_audio)
 to_video.Video_U_Audio(route_audio, route_output_video, name_output_video)

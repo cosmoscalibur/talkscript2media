@@ -1,3 +1,5 @@
+[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/cosmoscalibur/talkscript2media/master)
+
 # TalkScript2Media
 
 This package is an experiment to create an alternative to ARI based only in free software and open source. Convert a talk script and a set of slides to video.  

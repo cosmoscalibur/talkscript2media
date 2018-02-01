@@ -50,7 +50,7 @@ setup(name='talkscript2media',
     packages=find_packages(exclude=['docs', 'tests']),
     entry_points={
         'console_scripts': [
-            'sample=sample:main',
+            'ts2m=talkscript2media:main',
         ],
     },
 )

@@ -17,3 +17,7 @@ __pycache__/
 # Python compiled files
 *.pyc
 *.pyo
+# Exclude python build system files
+dist/
+build/
+*.egg-info/

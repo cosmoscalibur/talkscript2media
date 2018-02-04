@@ -1,4 +1,4 @@
-en 
+voice_ked_diphone 
 01.jpg>01.txt
 02.jpg>02.txt
 03.jpg>03.txt
